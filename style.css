@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+    margin: 0;
+    background-color: #f2940a;
+    font-family: "Helvetica", "Comic Sans MS", sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.videoContainer video {
+    position: fixed;
+    width: 70vw;
+    height: 70vh;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 100px;
+    left: 0;
+    z-index: 2;
+    background-color: #f2940a;
+}
+
+.overlay {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+    z-index: 3;
+    background: url(new-fixed-logo-strokenone-notxt.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.QFTxt p {
+    position: fixed;
+    z-index: 5;
+    top: 75%;
+    left: 0;
+    right: 0;
+    font-size: 3vw;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    font-style: italic;
+    white-space: nowrap;
+    background-color: #f2940a;
+}
+
+#social-media img {
+    position: fixed;
+    right: 75px;
+    bottom: 20px;
+    padding: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(http://pluspng.com/img-png/instagram-png-instagram-png-logo-512.png);
+    z-index: 10;
+}
+
+
+/* Media Queries */
+
+
+/* iPhone Portrait */
+
+@media only screen and (max-width: 40em) {
+    .overlay {
+        background-image: url(4FiPhone.png);
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+    .videoContainer video {
+        margin-right: -63px;
+        width: 130vw;
+        margin-top: 105px;
+        overflow: hidden;
+    }
+    #social-media img {
+        /* right: 15px;
+        bottom: 20px;
+        padding: 45px; */
+        bottom: 0px;
+        right: 0px;
+        padding: 35px;
+    }
+    .QFTxt p {
+        position: absolute;
+        font-size: 8vw;
+        padding: 0px 20px 20px 20px;
+        bottom: 50px;
+    }
+}
+
+
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .overlay {
+        /* background-size: 130% 80%; */
+        width: 100vw;
+        height: 100vh;
+    }
+    .videoContainer video {
+        height: 120vh;
+        width: 120vw;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .videoContainer video {
+        margin-right: -63px;
+        width: 130vw;
+        overflow: hidden;
+    }
+}
+
+
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
